@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <meta name="description" content="">
+    <meta name="author" content="Beacon Mechanics Inc.">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Beacon Mechanics - BLE Beacons Radio Planning</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body id="landing">
+    <div class="topmenu-landing"> 
+      <div class="container-fluid">
+        <div class="navigation-name">Beacon Mechanics</div>
+        <div class="navigation-bar navigation-bar-right">
+            <a class="btn btn-link" href="mailto:hello@beaconmech.com"  role="button">Contact us</a>
+            <a class="btn btn-link" data-toggle="modal" data-target="#modal-login" href="#"  role="button">Log in</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero" class="static-header">
+      <div class="text-heading">
+        <h1>iBeacon Radio Planning</h1>
+        <p>Plan, visualize and optimize BLE beacon installations</p>
+        <p>
+          <a class="btn" data-toggle="modal" data-target="#modal-invite" href="#" role="button">Request demo</a>
+          <a class="btn" data-toggle="modal" data-target="#modal-login" href="#" role="button">Log in</a>
+        </p>
+      </div>
+
+      <div class="video-wrapper">
+        <div class="container">
+          <a href="http://youtube.com" target="blank">
+            <img src="./img/macbook-air-transparent-background.png" class="img-responsive"/> 
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+
+      <div class="col-sm-4 feature-header">
+        <img src="img/plan.svg" height="120px"/>
+        <h2>1. Plan your iBeacon installation</h2>
+        <p>You enter the floorplan, place beacons and adjust settings. The service carries out modeling of radio signal propagation in the building and shows quality of a signal and other characteristics of your project. When you are satisfied with the system performance and cost, you can export the detailed and evident report on radio planning, including very detailed instructions for installation of beacons.</p>
+      </div>
+
+      <div class="col-sm-4 feature-header">
+        <img src="img/piggy.svg" height="120px"/>
+        <h2>2. Save time and money</h2>
+        <p> Having a detailed plan of a network of beacons, you will save time installing your system. Having picked up optimum balance between amount of beacons, operating time from the battery and quality of a signal you significantly cut down expenses on service of the system. In addition, you can involve less qualified personnel in this work. Moreover, the detailed and evident report about planning will favorably show your project in the opinion of end users and other stakeholders and will increase the general confidence in success of the project.</p>
+      </div>
+
+      <div class="col-sm-4 feature-header">
+        <img src="img/happy.svg" height="120px"/>
+        <h2>3. Please customers</h2>
+        <p>Beacon-enabled apps typically trigger events depending on received signal level. If signal level from beacons is unexpectedly worse where it is required or it is better where you don't wait for it at all, your apps will incorrectly work, to upset and irritate users. In addition, signal level from beacons strongly influences the accuracy of indoor positioning systems.</p>
+      </div>
+
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-sm-12 feature-header">
+        <h2>What are you waiting for?</h2>
+          <a class="btn btn-lg" data-toggle="modal" data-target="#modal-invite" href="#" role="button">Request demo</a>
+          <a class="btn btn-lg" data-toggle="modal" data-target="#modal-login" href="#" role="button">Log in</a>
+        </div>
+      </div> <!-- row -->
+
+      <footer class="footer">
+        <p>Copyright 2015 © by Beacon Mechanics, Inc. See <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
+        <p>Bluetooth, Apple, Google and other trademarks are the property of their respective trademark holders.</p>
+        <p>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>.</p>
+      </footer>
+  </div>
+
+	<!-- Login dialog -->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-login" aria-hidden="true" id="modal-login">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      
+		<form id="login-form" action="/login" method="post">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Welcome Back!</h4>
+	      </div>
+
+	      <div class="modal-body">
+	     	<div class="form-group">
+	     		<input class="form-control" placeholder="Email" id="login-form-username" type="text" />
+	     	</div>
+	     	<div class="form-group">
+	     		<input class="form-control" placeholder="Password" id="login-form-password" type="text" />
+	     	</div>
+	     	<div class="checkbox">
+	     	<label>
+	     		<input id="login-form-remember" value="1" checked="checked" type="checkbox">
+	     		Remember me
+	     	</label>
+	     	</div>
+
+	     	<a href="./user.html" class="btn btn-primary">Log in</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	      </div>
+	    </form>
+	    </div>
+	  </div>
+	</div><!-- /.modal -->
+
+	<!-- Request invite dialog -->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal-invite">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      
+		<form id="login-form" action="/invite" method="post">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Request Demo</h4>
+	      </div>
+
+	      <div class="modal-body">
+	        
+	        <p>Provide your name and corporate e-mail and we will contact you soon to confirm your Beacon Mechanics invite.</p>
+
+	        <div class="form-group">
+	      		<label for="invite-form-name">Name</label>
+	     		<input class="form-control" placeholder="Enter your name" id="invite-form-name" type="text" />
+	     	</div>
+	     	<div class="form-group">
+	     		<label for="invite-form-email">E-mail</label>
+	     		<input class="form-control" placeholder="Enter your corporate e-mail" id="login-form-email" type="text" />
+	     	</div>
+
+			<p>By requesting access to Beacon Mechanics services you accept <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
+	     	
+	     	<input class="btn btn-primary" type="submit" value="Submit request">
+	      	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	      </div>
+	    </form>
+	    </div>
+	  </div>
+	</div><!-- /.modal -->
+
+	<!-- video dialog -->
+	<!-- TODO -->	
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>

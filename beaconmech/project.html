@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <meta name="description" content="">
+    <meta name="author" content="Beacon Mechanics Inc.">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Мега Белая Дача - Beacon Mechanics</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-image: url('./img/capitola3.png')">
+
+<div class="topmenu">
+    <div class="container-fluid">
+        <div class="navigation-name">Мега Белая Дача</div> 
+
+        <div class="navigation-bar navigation-bar-right">
+            <a class="btn btn-link" href="mailto:support@beaconmech.com" role="button">Help</a>
+            <a class="btn btn-link" href="./user.html" role="button">Close</a>
+        </div>
+    </div>
+</div>
+
+<div class="controls-primary">
+    <div class="controls-content">
+        <div class="btn-group" data-toggle="buttons">
+            <label id="floorplanButton" class="btn btn-default active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked>Floorplan   
+            </label>
+            <label id="beaconsButton" class="btn btn-default">
+                <input type="radio" name="options" id="option2" autocomplete="off">Beacons
+            </label>
+            <label id="beaconsButton" class="btn btn-default" disabled="disabled">
+                <input type="radio" name="options" id="option2" autocomplete="off">Survey
+            </label>
+            <label id="beaconsButton" class="btn btn-default" disabled="disabled">
+                <input type="radio" name="options" id="option2" autocomplete="off">Reports
+            </label>
+
+        </div>
+    </div>
+</div>
+
+<div id="floorplanControls" class="controls-secondary">
+    <div class="controls-content">
+        <form class="form-inline">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked>Add   
+            </label>
+            <label class="btn btn-default">
+                <input type="radio" name="options" id="option2" autocomplete="off">Edit
+            </label>
+        </div>
+
+        <select class="form-control">
+            <option>Concrete wall (-20 dB)</option>
+            <option>Brick wall (-10 dB)</option>
+            <option>Light wall (-5 dB)</option>
+            <option>Window (-3 dB)</option>
+            <option>Door (-5 dB)</option>
+        </select>
+        <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</button>
+        </form>
+    </div>
+</div>
+
+<div id="beaconsControls" class="controls-secondary">
+    <div class="controls-content">
+        <form class="form-inline">
+        
+        <div class="btn-group" data-toggle="buttons">
+            <label id="beaconsControlButton" class="btn btn-default">
+                <input type="radio" name="options" id="option1" autocomplete="off">Beacons   
+            </label>
+            <label id="circlesControlButton" class="btn btn-default active">
+                <input type="radio" name="options" id="option2" autocomplete="off" checked>Circles
+            </label>
+            <label id="coverageControlButton" class="btn btn-default">
+                <input type="radio" name="options" id="option3" autocomplete="off">Coverage   
+            </label>
+            <label id="rssiControlButton" class="btn btn-default">
+                <input type="radio" name="options" id="option4" autocomplete="off">RSSI
+            </label>
+        </div>
+        
+        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-refresh"></i> Refresh</button>
+        </form>
+    </div>
+</div>
+
+<div id="mapLegend" class="controls-bottom">
+    <div class="controls-content">
+        <img src="./img/power-heatmap-legend.png" width="300px" />
+    </div>
+</div>
+
+
+<div class="sidebar-show">
+    <button class="btn btn-link" id="sidebarShowButton">Show Details</button>
+</div>
+
+<div id="sidebar">
+    <div class="pull-right">
+        <button class="btn btn-link" id="sidebarHideButton">Hide details</button>
+    </div>
+    <hr />
+    <div class="sidebar-content">
+              <form class="form-horizontal">
+              <fieldset>
+                
+                <table width="100%">
+                  <tr>
+                    <td width="33%" align="center"><h3>324</h3></td> 
+                    <td width="33%" align="center"><h3>70 m</h3></td>
+                    <td width="33%" align="center"><h3>4 y</h3></td></tr>
+                  <tr>
+                        <td align="center">beacons</td>
+                        <td align="center">range</td>
+                        <td align="center">battery</td>
+                  </tr>
+                </table>
+                <hr/>  
+                <table>
+                    <tbody>
+                    <tr>
+                        <td width="38%">Make &amp; Model:</td>
+                        <td>
+                            <select name="network.cell_type_id" class="form-control ">
+
+                                    <option value="1" selected="">
+                                        Estimote model REV.D3.3 Radio Beacon
+                                    </option>
+
+
+                                    <option value="2">
+                                        kontakt.io
+                                    </option>
+
+
+                                    <option value="3">
+                                        IBKS105 - Version 1.1
+                                    </option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TX power:</td>
+                        <td>
+                            <select name="network.tx_power" class="form-control">
+                                    <option value="4" selected="">
+                                        +4 dBm
+                                    </option>
+                                    <option value="0">
+                                        0 dBm
+                                    </option>
+                                    <option value="-4">
+                                        -4 dBm
+                                    </option>
+                                    <option value="-8">
+                                        -8 dBm
+                                    </option>
+                                    <option value="-12">
+                                        -12 dBm
+                                    </option>
+                                    <option value="-16">
+                                        -16 dBm
+                                    </option>
+                                    <option value="-20">
+                                        -20 dBm
+                                    </option>
+                                    <option value="-30">
+                                        -30 dBm
+                                    </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TX interval:</td>
+                        <td>
+
+                            <select name="network.tx_interval" class="form-control">
+                                    <option value="50">
+                                        50 ms
+                                    </option>
+                                    <option value="100" selected="">
+                                        100 ms
+                                    </option>
+                                    <option value="500">
+                                        500 ms
+                                    </option>
+                                    <option value="1000">
+                                        1 s
+                                    </option>
+                                    <option value="2000">
+                                        2 s
+                                    </option>
+                            </select>
+
+                        </td>
+                    </tr>
+                    <tr><td>Placement:</td>
+                      <td> <select class="form-control">
+                                    <option value="1">
+                                        Wall
+                                    </option>
+                                    <option value="2" selected="">
+                                        Ceiling
+                                    </option>
+                      </select></td>
+                    </tr>
+                    <tr><td>Height, m:</td>
+                        <td>    
+                            <input type="number" step="any" class="form-control" value="3">
+                </td>
+                    </tr>
+                    
+                    </tr>
+
+                    </tbody></table>
+        </fieldset>
+        </form>
+        </div>
+
+        <hr />
+    </div>    
+</div>
+    
+</div>
+
+
+<script type="text/javascript">
+    $("#beaconsControls").hide();
+    $("#mapLegend").hide();    
+    $("#sidebar").hide();
+
+    $("#sidebarHideButton").click(function() {
+        $("#sidebar").hide();
+    });
+
+    $("#sidebarShowButton").click(function() {
+        $("#sidebar").show();
+    });
+
+    $("#floorplanButton").click(function() {
+        $("#floorplanControls").show();
+        $("#beaconsControls").hide();
+        $("#mapLegend").hide();
+    });
+
+    $("#beaconsButton").click(function() {
+        $("#beaconsControls").show();
+        $("#floorplanControls").hide();
+    });
+
+    $("#rssiControlButton").click(function() {
+        $("#mapLegend").show();
+    });
+
+
+</script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
